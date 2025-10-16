@@ -146,7 +146,7 @@ export default function EditProfilePage() {
                 placeholder="https://example.com/foto.jpg"
                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
-              <p className="text-sm text-gray-500 mt-1">Bir resim URL'si girebilirsiniz</p>
+             💡 <a href="https://imgur.com" target="_blank" className="text-purple-600 hover:underline">Imgur</a> veya <a href="https://imgbb.com" target="_blank" className="text-purple-600 hover:underline">ImgBB</a> üzerinden fotoğraf yükleyip URL&apos;sini buraya yapıştırabilirsiniz
             </div>
 
             <div className="flex gap-4">
