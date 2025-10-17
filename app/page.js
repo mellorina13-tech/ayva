@@ -3,14 +3,21 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import Header from '@/components/Header'
-import { useSearchParams } from 'next/navigation'
+import Link from 'next/link'
 
 export default function Home() {
   const [listings, setListings] = useState([])
   const [loading, setLoading] = useState(true)
   const [filteredListings, setFilteredListings] = useState([])
-  const searchParams = useSearchParams()
-  const categoryFilter = searchParams.get('category')
+  const [categoryFilter, setCategoryFilter] = useState(null)
+
+  useEffect(() => {
+    // URL'den category parametresini al
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search)
+      setCategoryFilter(params.get('category'))
+    }
+  }, [])
 
   useEffect(() => {
     async function getListings() {
@@ -55,12 +62,12 @@ export default function Home() {
             <span className="text-purple-800 font-semibold">
               📂 Filtrelenen Kategori: <span className="text-purple-900 font-bold">{categoryFilter}</span>
             </span>
-            <a 
+            <Link 
               href="/"
               className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition font-semibold"
             >
               Filtreyi Kaldır
-            </a>
+            </Link>
           </div>
         )}
 
@@ -73,12 +80,12 @@ export default function Home() {
               {categoryFilter ? `${categoryFilter} kategorisinde henüz ilan yok` : 'Henüz ilan yok'}
             </h3>
             <p className="text-gray-600 mb-6">İlk ilanı siz oluşturun!</p>
-            <a 
+            <Link 
               href="/create-listing"
               className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-3 rounded-lg font-bold hover:shadow-lg transition"
             >
               Ücretsiz İlan Ver
-            </a>
+            </Link>
           </div>
         ) : (
           <>
