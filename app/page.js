@@ -12,7 +12,6 @@ export default function Home() {
   const [categoryFilter, setCategoryFilter] = useState(null)
 
   useEffect(() => {
-    // URL'den category parametresini al
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search)
       setCategoryFilter(params.get('category'))
