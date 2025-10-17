@@ -217,7 +217,7 @@ export default function Header() {
                     <div className="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
                     <div>
                       <h4 className="font-bold text-gray-800 mb-1">İlan Oluştur</h4>
-                      <p className="text-gray-600">İhtiyacınız olan hizmeti (örn: "Evde boya badana yapılacak") detaylı şekilde anlatın</p>
+                      <p className="text-gray-600">İhtiyacınız olan hizmeti (örn: &quot;Evde boya badana yapılacak&quot;) detaylı şekilde anlatın</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
