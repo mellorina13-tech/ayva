@@ -202,7 +202,7 @@ export default function Header() {
             <div className="bg-gradient-to-r from-pink-100 to-purple-100 rounded-xl p-6 mb-8">
               <p className="text-lg text-center font-semibold text-gray-800">
                 🎉 <span className="text-purple-600">Ayva</span> tamamen <span className="text-pink-600">ÜCRETSİZ</span>dir! 
-                Armut gibi çalışır, hizmet arayanlarla sağlayanları buluşturur.
+                Hizmet arayanlarla hizmet sağlayanları buluşturur.
               </p>
             </div>
 
